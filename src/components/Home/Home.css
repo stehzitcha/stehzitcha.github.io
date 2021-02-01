@@ -1,7 +1,15 @@
 .container {
     color: #fff;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    font-family: 'Press Start 2P';
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Header */
@@ -23,7 +31,7 @@
 
 #header p {
     font-size: .5em;
-    margin: 0.75em 0 0.25em 0;
+    margin: 2em;
     opacity: 0.75;
 }
 

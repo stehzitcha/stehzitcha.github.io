@@ -1,8 +1,5 @@
 import React from 'react';
 import './Home.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 export const Home: React.FunctionComponent = () => {
   const homeURLs = {
@@ -11,15 +8,15 @@ export const Home: React.FunctionComponent = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container centered">
       <header id="header">
         <h1>Stella Iemma</h1>
-        <p>Crazy human being and software developer on the spare time 😌</p>
+        <p>Crazy human being and software developer on the spare time </p>
         <nav>
           <ul>
-            <li><a href={homeURLs.github}><FontAwesomeIcon icon={faGithub} /><span className="label">Github</span></a></li>
-            <li><a href={homeURLs.linkedin}><FontAwesomeIcon icon={faLinkedin} /><span className="label">Linkedin</span></a></li>
-            <li><a href="#"><FontAwesomeIcon icon={faEnvelopeSquare} /><span className="label">Email</span></a></li>
+            <li><a href={homeURLs.github}><i className="nes-icon github is-large"></i><span className="label">Github</span></a></li>
+            <li><a href={homeURLs.linkedin}><i className="nes-icon linkedin is-large"></i><span className="label">Linkedin</span></a></li>
+            <li><a href="mailto:stella.iemma@gmail.com"><i className="nes-icon gmail is-large"></i><span className="label">Email me</span></a></li>
           </ul>
         </nav>
       </header>

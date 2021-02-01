@@ -1,10 +1,12 @@
+
 html {
-  background: url('./images/galaxy.jpg') top center no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  cursor: default;
 }
 
 .App {
   text-align: center;
+  background: url('./images/galaxy.jpg') top center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
