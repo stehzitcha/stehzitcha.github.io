@@ -14,7 +14,7 @@ export const Home: React.FunctionComponent = () => {
     <div className="container">
       <header id="header">
         <h1>Stella Iemma</h1>
-        <p>Crazy human being and software developer on my spare time 😌</p>
+        <p>Crazy human being and software developer on the spare time 😌</p>
         <nav>
           <ul>
             <li><a href={homeURLs.github}><FontAwesomeIcon icon={faGithub} /><span className="label">Github</span></a></li>
