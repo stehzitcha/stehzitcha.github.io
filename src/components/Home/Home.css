@@ -26,13 +26,13 @@
 }
 
 #header h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 900;
     /* line-height: 1em; */
 }
 
 #header p {
-    font-size: .8em;
+    font-size: .5em;
     margin: 1em;
     opacity: 0.75;
 }
@@ -43,11 +43,11 @@
 
 #header nav li {
     display: inline-block;
-    height: 5.35em;
+    height: 5em;
     line-height: 5.885em;
     position: relative;
     top: 0;
-    width: 5.35em;
+    width: 5em;
 }
 
 #header nav li:hover {
