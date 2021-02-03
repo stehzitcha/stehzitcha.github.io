@@ -28,13 +28,17 @@
 #header h1 {
     font-size: 1.5em;
     font-weight: 900;
-    line-height: 1em;
+    /* line-height: 1em; */
 }
 
 #header p {
-    font-size: .5em;
-    margin: 2em;
+    font-size: .8em;
+    margin: 1em;
     opacity: 0.75;
+}
+
+#header span {
+    font-size: 3em;
 }
 
 #header nav li {
@@ -44,6 +48,10 @@
     position: relative;
     top: 0;
     width: 5.35em;
+}
+
+#header nav li:hover {
+    opacity: 0.75;
 }
 
 #header nav, #header nav ul {

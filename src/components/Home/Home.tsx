@@ -32,7 +32,7 @@ return (
     <div className="container centered">
       <header id="header">
         <h1>Stella Iemma</h1>
-        <p>Crazy human being and software developer on spare time </p>
+        <p><span>👽</span> & software developer on spare time </p>
         <nav>
           <ul>
             <li><a href={homeURLs.github}><i className="nes-icon github is-large"></i><span className="label">Github</span></a></li>

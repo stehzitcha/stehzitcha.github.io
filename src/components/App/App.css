@@ -3,6 +3,21 @@ html {
   cursor: default;
 }
 
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media only screen and (max-width:480px) {
+  html {
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
 /* Twinkle Animations > Twinkle 1 */
 
 @keyframes twinkle_one {
@@ -46,10 +61,11 @@ html {
     position: absolute;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    /* background-color: #0f1b29; */
+    display: flex;
+    flex-direction: column;
 
     background: linear-gradient(-45deg, #0f0a22, #130229, #040f3f);
     background-size: 400% 400%;
