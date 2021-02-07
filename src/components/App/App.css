@@ -1,6 +1,7 @@
 
 html {
   cursor: default;
+  /* scroll-behavior: smooth; */
 }
 
 html, body {
@@ -8,13 +9,11 @@ html, body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 
 @media only screen and (max-width:480px) {
   html {
     width: 100vw;
-    overflow: hidden;
   }
 }
 
@@ -66,11 +65,11 @@ html, body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
+    overflow-y: auto;
     background: linear-gradient(-45deg, #0f0a22, #130229, #040f3f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-}      
+}
 
 .star{
   position: absolute;

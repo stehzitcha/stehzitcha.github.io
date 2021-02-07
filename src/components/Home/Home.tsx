@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './Home.css';
 import FadeIn from "react-fade-in";
 import "bootstrap/dist/css/bootstrap.css";
+import stella from './../Home/euzinha.jpg'
 
 export const Home: React.FunctionComponent = () => {
   const homeURLs = {
@@ -10,38 +11,100 @@ export const Home: React.FunctionComponent = () => {
     github: "https://github.com/stehzitcha/"
   }
 
-const [loading, setLoading] = useState(true)
+  const skills = [
+    {
+      item: "html"
+    },
+    {
+      item: "css"
+    },
+    {
+      item: "css-in-js",
+    },
+    {
+      item: "vanilla js",
+    },
+    {
+      item: "react js",
+    },
+    {
+      item: "redux",
+    },
+    {
+      item: "responsive",
+    },
+    {
+      item: "git",
+    },
+    {
+      item: "github",
+    },
+    {
+      item: "api",
+    }
+  ];
 
-useEffect(() => {
-    setTimeout(() => {
-      const el = document.querySelector(".loader-container");
-      if (el) {
-        el.remove();
-        setLoading(!loading);
-      }
-    }, 2500)
-    
-}, []);
+  const [loading, setLoading] = useState(true);
 
-if (loading) {
+  useEffect(() => {
+      setTimeout(() => {
+        const el = document.querySelector(".loader-container");
+        if (el) {
+          el.remove();
+          setLoading(!loading);
+        }
+      }, 2500)
+      
+  }, []);
+
+  if (loading) {
     return null;
-}
+  }
 
-return (
-  <FadeIn>
-    <div className="container centered">
-      <header id="header">
-        <h1>Stella Iemma</h1>
-        <p><span>👽</span> & software developer on spare time </p>
-        <nav>
-          <ul>
-            <li><a href={homeURLs.github}><i className="nes-icon github is-large"></i><span className="label">Github</span></a></li>
-            <li><a href={homeURLs.linkedin}><i className="nes-icon linkedin is-large"></i><span className="label">Linkedin</span></a></li>
-            <li><a href="mailto:stella.iemma@gmail.com"><i className="nes-icon gmail is-large"></i><span className="label">Email me</span></a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  </FadeIn>
-  );
+  return (
+    <FadeIn>
+      <div className="container">
+        <main id="main">
+
+          <section className="description">
+            <h1 className="column">Stella Iemma</h1>
+            <img src={stella} alt="Avatar" className="avatar column" />
+            <p className="column"><span>👽</span> & software developer on spare time </p>
+          </section>
+
+          <section className="topic">
+            <h2>
+              <a href="#about">#</a>
+              Skills
+            </h2>
+
+            <div className="item">
+              <h3 className="name">
+                Web Development
+              </h3>
+              <div className="keywords">
+                {
+                  skills &&
+                  skills.map((value, index) => (
+                      <a href="#" className="nes-badge skill" key={index}>
+                        <span className="is-primary">{value.item}</span>
+                      </a>
+                    ))
+                }
+              </div>
+          </div>
+          </section>
+        </main>
+        <header id="header">
+          <nav>
+            <ul>
+              <li><a href={homeURLs.github}><i className="nes-icon github is-large"></i><span className="label">Github</span></a></li>
+              <li><a href={homeURLs.linkedin}><i className="nes-icon linkedin is-large"></i><span className="label">Linkedin</span></a></li>
+              <li><a href="mailto:stella.iemma@gmail.com"><i className="nes-icon gmail is-large"></i><span className="label">Email me</span></a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </FadeIn>
+    );
 }

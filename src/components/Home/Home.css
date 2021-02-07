@@ -1,8 +1,40 @@
+@media only screen and (max-width:480px) {
+    .container {
+        display: table !important;
+    }
+    .description {
+        flex-direction: column;
+    }
+    #main .description .column.avatar {
+        width: 5em !important;
+    }
+    #main .description .column {
+        width: auto !important;
+    }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+  /* close commented backslash hack */
+
 .container {
     color: #fff;
     text-align: center;
     font-size: 2em;
     font-family: 'Press Start 2P';
+    /* height: 100vh; */
+    /* display: table;
+    clear: both; */
 }
 
 .centered {
@@ -11,7 +43,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /* Header */
@@ -22,13 +54,12 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    margin: 2em auto;
+    margin: 2em 2em 0em 2em;
 }
 
 #header h1 {
     font-size: 1.2em;
     font-weight: 900;
-    /* line-height: 1em; */
 }
 
 #header p {
@@ -66,4 +97,70 @@
 
 #header .label {
     display: none;
+}
+
+#main {
+    margin-top: 2.5em;
+}
+
+#main::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+#main .topic {
+    margin-top: 2.5em;
+}
+
+#main .topic a {
+    margin-right: 20px;
+}
+
+#main .keywords {
+    margin-top: 50px;
+}
+
+#main .keywords .skill {
+    display: inline-flex;
+    font-size: .4em;
+}
+#main p {
+    font-size: .5em;
+    margin: 1em;
+    opacity: 0.75;
+}
+
+#main p span {
+    font-size: 3em;
+}
+
+#main h1, h2 {
+    font-size: .8em;
+}
+
+#main h2 {
+    font-size: .8em;
+}
+
+#main h3 {
+    font-size: .6em;
+}
+
+#main .avatar {
+    vertical-align: middle;
+    width: 1em !important;
+    border-radius: 50%;
+}
+
+#main .description {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5em;
+}
+
+#main .description .column {
+    flex-grow: 1;
+    width: 5em;
+    align-self: center;
 }

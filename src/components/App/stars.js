@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             var newEl = document.createElement('div');
             newEl.classList.add('star', `star-type${star_type}`);
             
-            $galaxy.appendChild(newEl)
+            $galaxy.appendChild(newEl);
 
             newEl.style.top = `${position.y}px`;
             newEl.style.left = `${position.x}px`;
