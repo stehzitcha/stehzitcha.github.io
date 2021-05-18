@@ -72,28 +72,6 @@ export const Home: React.FunctionComponent = () => {
             <p className="column"><span>👽</span> & software developer on spare time </p>
           </section>
 
-          <section className="topic">
-            <h2>
-              <a href="#about">#</a>
-              Skills
-            </h2>
-
-            <div className="item">
-              <h3 className="name">
-                Web Development
-              </h3>
-              <div className="keywords">
-                {
-                  skills &&
-                  skills.map((value, index) => (
-                      <a href="#" className="nes-badge skill" key={index}>
-                        <span className="is-primary">{value.item}</span>
-                      </a>
-                    ))
-                }
-              </div>
-          </div>
-          </section>
         </main>
         <header id="header">
           <nav>
